@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 public class FullScreenImage extends AppCompatActivity {
-    private ArrayList arrayList;
+     ArrayList arrayList;
     ImageView full_img;
 
     @Override
@@ -19,8 +19,6 @@ public class FullScreenImage extends AppCompatActivity {
         int img = intent.getIntExtra("img", 0);
         full_img.setImageResource(img);
         RecyclerAdapter imageAdapter = new RecyclerAdapter(arrayList,getApplicationContext());
-
-//        full_img.setImageResource(RecycleModel.getImg());
 
     }
 }

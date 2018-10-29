@@ -22,8 +22,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         this.arrayList = arrayList;
     }
 
-
-
     @Override
     public RecyclerAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_item,parent,false);
@@ -48,9 +46,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         });
     }
 
-
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         return arrayList.size();
     }
 
