@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-import javax.security.auth.login.LoginException;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
     Context context;
