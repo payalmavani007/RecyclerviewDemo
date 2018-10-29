@@ -17,7 +17,7 @@ public class RecycleViewDemo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle_view_demo);
         recyclerView = (RecyclerView) findViewById(R.id.recycleView);
-        adapter = new RecyclerAdapter(getItem());
+        adapter = new RecyclerAdapter(getItem(),getApplicationContext());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

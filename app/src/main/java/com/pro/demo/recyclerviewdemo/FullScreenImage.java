@@ -18,9 +18,9 @@ public class FullScreenImage extends AppCompatActivity {
         Intent intent = getIntent();
         int img = intent.getIntExtra("img", 0);
         full_img.setImageResource(img);
-        RecyclerAdapter imageAdapter = new RecyclerAdapter(arrayList);
+        RecyclerAdapter imageAdapter = new RecyclerAdapter(arrayList,getApplicationContext());
 
-        full_img.setImageResource(RecycleModel.getImg());
+//        full_img.setImageResource(RecycleModel.getImg());
 
     }
 }

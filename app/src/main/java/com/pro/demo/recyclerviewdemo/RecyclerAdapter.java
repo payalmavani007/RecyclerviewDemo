@@ -17,7 +17,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     Context context;
     private ArrayList arrayList;
 
-    public RecyclerAdapter(ArrayList arrayList) {
+    public RecyclerAdapter(ArrayList arrayList,Context context) {
+        this.context=context;
         this.arrayList = arrayList;
     }
 
@@ -32,14 +33,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     @Override
     public void onBindViewHolder(RecyclerAdapter.MyViewHolder holder, final int position) {
-        RecycleModel model = (RecycleModel) arrayList.get(position);
+        final RecycleModel model = (RecycleModel) arrayList.get(position);
         holder.imageView.setImageResource(model.getImg());
         holder.textView.setText(model.getName());
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, FullScreenImage.class);
-                intent.putExtra("img",position);
+                intent.putExtra("img",model.getImg());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Log.d("tag", "abc: "+arrayList.get(position));
                 context.startActivity(intent);
             }

@@ -13,7 +13,7 @@ public class RecycleModel
             this.name = name;
         }
 
-        public static int getImg() {
+        public  int getImg() {
             return img;
         }
 
